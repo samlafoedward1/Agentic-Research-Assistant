@@ -18,3 +18,13 @@ class ResearchPlan(BaseModel):
         min_length=1,
         max_length=5,
     )
+    
+
+class RetrievedDocument(BaseModel):
+    """Normalized document returned by the retriever"""
+    
+    title: str
+    url: str
+    content: str
+    score: float | None = None
+    
