@@ -97,7 +97,7 @@ def rank_chunks(
     ]
      
     document_vectors = np.array(
-        embedder.embed_doucments(texts),
+        embedder.embed_documents(texts),
         dtype="float32",
      )
      
