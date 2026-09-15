@@ -20,21 +20,26 @@ def main() -> None:
     ):
         print(f"{index}. {search_query}")
         
-    print("\nRetrieving documents...\n")
+    print("\nRetrieving information...\n")
     
-    documents = retrieve_documents(
-        plan.search_queries
+    chunks = retrieve_documents(
+        user_query=query,
+        search_queries=plan.search_queries,
     )
     
-    print(f"Retrieved {len(documents)} documents.\n")
+    print(
+        f"Selected {len(chunks)}"
+        "relevant chunks.\n"
+    )
     
-    for index, document in enumerate(
-        documents[:10],
+    for index, chunk in enumerate(
+        chunks,
         start=1,
     ):
-        print(f"{index}. {document.title}")
-        print(f"     {document.url}") 
-        print(f".    {document.content[:200]}") 
+        print(f"{index}. {chunk.title}")
+        print(f"     {chunk.url}") 
+        print(f"Similarity {chunk.score:.4f}")
+        print(f".    {chunk.content[:250]}") 
         print()  
     
     

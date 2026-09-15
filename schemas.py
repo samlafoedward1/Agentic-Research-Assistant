@@ -28,3 +28,11 @@ class RetrievedDocument(BaseModel):
     content: str
     score: float | None = None
     
+    
+class RetrievedChunk(BaseModel):
+    """Chunk of webpage content used for semantic retrieval"""
+    
+    content: str
+    title: str
+    url: str
+    score: float | None = None
