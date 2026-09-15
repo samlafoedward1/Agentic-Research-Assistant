@@ -27,8 +27,5 @@ Start → Supervisor → Planner → Supervisor → Retriever → Supervisor (ch
 
 ## Tech stack
 
-LangGraph · OpenAI API · Tavily · Hugging Face (`sentence-transformers`, eval datasets) · Vector store (Chroma/FAISS) · MLflow · Streamlit · Python
+LangGraph · QWEN2.5 · Trafilatura · Hugging Face (`sentence-transformers`, eval datasets) · Vector store (FAISS) · MLflow · Streamlit · Python
 
-## Status
-
-🚧 In design — requirements and graph architecture finalized, implementation not yet started.
